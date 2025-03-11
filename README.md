@@ -11,7 +11,7 @@
                                                       NovaNet @2025
 ```
 
-# zkEngine Proof Party Client
+# NovaNet's Proof Party Client
 
 This is a command-line interface for generating zero-knowledge proofs from WebAssembly (WASM) modules using zkEngine. 
 
@@ -79,10 +79,10 @@ The tool will:
 
 ## Technical Details
 
-This client uses zkEngine with:
-- Bn256 IPA-based engine for cryptographic operations
-- Spartan SNARK for proof generation
-- Dual-mode execution for efficient verification
+This client uses zkEngine:
+- It is powered by folding scheme variants of KST22 (https://eprint.iacr.org/2021/370).
+- It can generate succint proofs that can be verified on EVM blockchains.
+- It can work on various device sizes due to low memory usage.
 
 ## Contributing
 
@@ -94,4 +94,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Acknowledgments
 
-This project utilizes the zkEngine (https://github.com/ICME-Lab/zkEngine_dev) framework and various other open-source libraries. It is powered by folding scheme variants of KST22 (https://eprint.iacr.org/2021/370)
+This project utilizes the zkEngine (https://github.com/ICME-Lab/zkEngine_dev) framework and various other open-source libraries. 
