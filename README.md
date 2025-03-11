@@ -62,10 +62,16 @@ proof-party-client --wat <WAT_FILE> [OPTIONS]
 - `-h, --help`: Print help
 - `-V, --version`: Print version
 
-### Example
+### Examples
 
 ```bash
-proof-party-client --wat fibonacci.wat --invoke fib --args 16 --step-size 10
+target/release/party_cli --wat fibonacci.wat --invoke fib --args 16 --step-size 10
+```
+
+Or run it directly:
+
+```bash
+cargo run --release -- --wat wasms/fib.wat --invoke fib --args 16 --step-size 10
 ```
 
 ## Output
