@@ -1,0 +1,12 @@
+[package]
+name = "party_cli"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+zk-engine = { git = "https://github.com/ICME-Lab/zkEngine_dev", branch="arecibo-wyatt" }
+wat = "1.0"
+clap = { version = "4.4", features = ["derive"] }
+serde_json = { version = "1.0" }
+chrono = "0.4"
+
