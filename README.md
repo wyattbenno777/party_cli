@@ -35,7 +35,7 @@ The Proof Party Client allows you to:
 ## Prerequisites
 
 - Rust and Cargo installed
-- zkEngine dependencies
+- Git installed
 
 ## Installation
 
@@ -50,7 +50,7 @@ cargo build --release
 ## Usage
 
 ```bash
-proof-party-client --wat <WAT_FILE> [OPTIONS]
+party_cli --wat <WAT_FILE> [OPTIONS]
 ```
 
 ### Options
@@ -65,7 +65,7 @@ proof-party-client --wat <WAT_FILE> [OPTIONS]
 ### Examples
 
 ```bash
-target/release/party_cli --wat fibonacci.wat --invoke fib --args 16 --step-size 10
+./target/release/party_cli --wat ./wasms/fib.wat --invoke fib --args 16 --step-size 10
 ```
 
 Or run it directly:
