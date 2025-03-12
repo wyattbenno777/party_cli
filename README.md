@@ -42,7 +42,7 @@ The Proof Party Client allows you to:
 Clone this repository and build with cargo:
 
 ```bash
-git clone https://github.com/wyatt-benno/proof-party-client.git
+git clone https://github.com/wyattbenno777/party_cli.git
 cd proof-party-client
 cargo build --release
 ```
