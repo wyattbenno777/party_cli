@@ -43,7 +43,7 @@ Clone this repository and build with cargo:
 
 ```bash
 git clone https://github.com/wyattbenno777/party_cli.git
-cd proof-party-client
+cd party_cli
 cargo build --release
 ```
 
