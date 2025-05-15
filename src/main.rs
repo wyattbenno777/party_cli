@@ -60,7 +60,7 @@ fn main() {
                 .long("step-size")
                 .value_name("NUM")
                 .help("Step size for proving")
-                .default_value("10"),
+                .default_value("20"),
         )
         // Removed the output directory argument as we'll always use /proofs
         .get_matches();
