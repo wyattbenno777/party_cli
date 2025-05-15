@@ -1,6 +1,7 @@
+use halo2curves::bn256::Bn256;
 use zk_engine::{
     nova::{
-        provider::{ipa_pc, Bn256EngineIPA},
+        provider::{ipa_pc, Bn256EngineIPA, Bn256EngineKZG, GrumpkinEngine},
         spartan,
         traits::Dual,
     },
@@ -16,11 +17,12 @@ use wat::parse_str;
 use clap::{Arg, Command};
 
 // Ensure you use the correct cycle pairing
-pub type E = Bn256EngineIPA;
-pub type EE1 = ipa_pc::EvaluationEngine<E>;
-pub type EE2 = ipa_pc::EvaluationEngine<Dual<E>>;
-pub type S1 = spartan::batched::BatchedRelaxedR1CSSNARK<E, EE1>;
-pub type S2 = spartan::snark::RelaxedR1CSSNARK<Dual<E>, EE2>;
+type E = Bn256EngineKZG;
+type E2 = GrumpkinEngine;
+type EE1 = zk_engine::nova::provider::hyperkzg::EvaluationEngine<Bn256, E>;
+type EE2 = zk_engine::nova::provider::ipa_pc::EvaluationEngine<E2>;
+type S1 = zk_engine::nova::spartan::batched::BatchedRelaxedR1CSSNARK<E, EE1>; 
+type S2 = zk_engine::nova::spartan::snark::RelaxedR1CSSNARK<E2, EE2>; 
 
 fn main() {
     init_logger();

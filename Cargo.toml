@@ -9,4 +9,5 @@ wat = "1.0"
 clap = { version = "4.4", features = ["derive"] }
 serde_json = { version = "1.0" }
 chrono = "0.4"
+halo2curves = { git = "https://github.com/ICME-Lab/halo2curves", branch = "main", features = ["bits", "derive_serde"] }
 
