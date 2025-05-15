@@ -1,10 +1,6 @@
 use halo2curves::bn256::Bn256;
 use zk_engine::{
-    nova::{
-        provider::{ipa_pc, Bn256EngineIPA, Bn256EngineKZG, GrumpkinEngine},
-        spartan,
-        traits::Dual,
-    },
+    nova::provider::{Bn256EngineKZG, GrumpkinEngine},
     utils::logging::init_logger,
     wasm_ctx::{WASMArgsBuilder, WASMCtx},
     wasm_snark::{StepSize, WasmSNARK},
